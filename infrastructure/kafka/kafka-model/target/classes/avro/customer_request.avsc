@@ -1,0 +1,61 @@
+{
+  "namespace": "com.food.ordering.system.kafka.order.avro.model",
+  "type": "record",
+  "name": "CustomerAvroModel",
+  "fields": [
+    {
+      "name": "id",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "name",
+      "type": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "colors",
+      "type": {
+        "type": "array",
+        "items":{
+          "name":"Color",
+          "type":"record",
+          "fields":[
+            {"name":"hex", "type": "string"}
+          ]
+        }
+      }
+    },
+    {
+      "name": "subscriptionType",
+      "type": {
+        "type": "enum",
+        "name": "SubscriptionType",
+        "symbols": [ "BASIC","STANDARD","PREMIUM"]
+      }
+    },
+    {
+      "name": "createdAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "subscriptionFinishAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "active",
+      "type": {
+        "type": "boolean"
+      }
+    }
+  ]
+}

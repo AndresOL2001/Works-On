@@ -1,0 +1,5 @@
+com\food\ordering\system\kafka\order\avro\model\SubscriptionType.class
+com\food\ordering\system\kafka\order\avro\model\Color$Builder.class
+com\food\ordering\system\kafka\order\avro\model\CustomerAvroModel.class
+com\food\ordering\system\kafka\order\avro\model\Color.class
+com\food\ordering\system\kafka\order\avro\model\CustomerAvroModel$Builder.class
