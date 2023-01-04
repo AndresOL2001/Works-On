@@ -59,6 +59,36 @@
             </dependency>
             <dependency>
                 <groupId>com.work.on</groupId>
+                <artifactId>user-domain-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>user-application-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>user-messaging</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>user-dataaccess</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>user-application</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>user-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
                 <artifactId>customer-dataaccess</artifactId>
                 <version>${project.version}</version>
             </dependency>

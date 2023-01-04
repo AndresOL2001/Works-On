@@ -1,10 +1,7 @@
 package com.work.on.customer.service.dataaccess.entity;
 
-import com.work.on.customer.service.domain.entity.Color;
-import com.work.on.customer.service.domain.entity.User;
 import com.work.on.domain.valueobject.SubscriptionType;
 import lombok.*;
-import org.springframework.context.annotation.Primary;
 
 import javax.persistence.*;
 import java.time.ZonedDateTime;

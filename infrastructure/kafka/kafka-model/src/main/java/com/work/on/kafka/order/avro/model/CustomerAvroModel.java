@@ -5,17 +5,19 @@
  */
 package com.work.on.kafka.order.avro.model;
 
+import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
+import org.apache.avro.util.Utf8;
 import org.apache.avro.message.BinaryMessageEncoder;
 import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 62138745472798786L;
+  private static final long serialVersionUID = 2258082800028113348L;
 
 
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CustomerAvroModel\",\"namespace\":\"com.food.ordering.system.kafka.order.avro.model\",\"fields\":[{\"name\":\"id\",\"type\":{\"type\":\"string\",\"logicalType\":\"uuid\"}},{\"name\":\"name\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"colors\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Color\",\"fields\":[{\"name\":\"hex\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}}},{\"name\":\"subscriptionType\",\"type\":{\"type\":\"enum\",\"name\":\"SubscriptionType\",\"symbols\":[\"BASIC\",\"STANDARD\",\"PREMIUM\"]}},{\"name\":\"createdAt\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"subscriptionFinishAt\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"active\",\"type\":\"boolean\"}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"CustomerAvroModel\",\"namespace\":\"com.work.on.kafka.order.avro.model\",\"fields\":[{\"name\":\"id\",\"type\":{\"type\":\"string\",\"logicalType\":\"uuid\"}},{\"name\":\"name\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"colors\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Color\",\"fields\":[{\"name\":\"hex\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}}},{\"name\":\"subscriptionType\",\"type\":{\"type\":\"enum\",\"name\":\"SubscriptionType\",\"symbols\":[\"BASIC\",\"STANDARD\",\"PREMIUM\"]}},{\"name\":\"createdAt\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"subscriptionFinishAt\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"}},{\"name\":\"active\",\"type\":\"boolean\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static final SpecificData MODEL$ = new SpecificData();
@@ -76,8 +78,8 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
 
   private java.lang.String id;
   private java.lang.String name;
-  private java.util.List<Color> colors;
-  private SubscriptionType subscriptionType;
+  private java.util.List<com.work.on.kafka.order.avro.model.Color> colors;
+  private com.work.on.kafka.order.avro.model.SubscriptionType subscriptionType;
   private java.time.Instant createdAt;
   private java.time.Instant subscriptionFinishAt;
   private boolean active;
@@ -99,7 +101,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
    * @param subscriptionFinishAt The new value for subscriptionFinishAt
    * @param active The new value for active
    */
-  public CustomerAvroModel(java.lang.String id, java.lang.String name, java.util.List<Color> colors, SubscriptionType subscriptionType, java.time.Instant createdAt, java.time.Instant subscriptionFinishAt, java.lang.Boolean active) {
+  public CustomerAvroModel(java.lang.String id, java.lang.String name, java.util.List<com.work.on.kafka.order.avro.model.Color> colors, com.work.on.kafka.order.avro.model.SubscriptionType subscriptionType, java.time.Instant createdAt, java.time.Instant subscriptionFinishAt, java.lang.Boolean active) {
     this.id = id;
     this.name = name;
     this.colors = colors;
@@ -148,8 +150,8 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
     switch (field$) {
     case 0: id = value$ != null ? value$.toString() : null; break;
     case 1: name = value$ != null ? value$.toString() : null; break;
-    case 2: colors = (java.util.List<Color>)value$; break;
-    case 3: subscriptionType = (SubscriptionType)value$; break;
+    case 2: colors = (java.util.List<com.work.on.kafka.order.avro.model.Color>)value$; break;
+    case 3: subscriptionType = (com.work.on.kafka.order.avro.model.SubscriptionType)value$; break;
     case 4: createdAt = (java.time.Instant)value$; break;
     case 5: subscriptionFinishAt = (java.time.Instant)value$; break;
     case 6: active = (java.lang.Boolean)value$; break;
@@ -195,7 +197,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
    * Gets the value of the 'colors' field.
    * @return The value of the 'colors' field.
    */
-  public java.util.List<Color> getColors() {
+  public java.util.List<com.work.on.kafka.order.avro.model.Color> getColors() {
     return colors;
   }
 
@@ -204,7 +206,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
    * Sets the value of the 'colors' field.
    * @param value the value to set.
    */
-  public void setColors(java.util.List<Color> value) {
+  public void setColors(java.util.List<com.work.on.kafka.order.avro.model.Color> value) {
     this.colors = value;
   }
 
@@ -212,7 +214,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
    * Gets the value of the 'subscriptionType' field.
    * @return The value of the 'subscriptionType' field.
    */
-  public SubscriptionType getSubscriptionType() {
+  public com.work.on.kafka.order.avro.model.SubscriptionType getSubscriptionType() {
     return subscriptionType;
   }
 
@@ -221,7 +223,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
    * Sets the value of the 'subscriptionType' field.
    * @param value the value to set.
    */
-  public void setSubscriptionType(SubscriptionType value) {
+  public void setSubscriptionType(com.work.on.kafka.order.avro.model.SubscriptionType value) {
     this.subscriptionType = value;
   }
 
@@ -280,8 +282,8 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
    * Creates a new CustomerAvroModel RecordBuilder.
    * @return A new CustomerAvroModel RecordBuilder
    */
-  public static CustomerAvroModel.Builder newBuilder() {
-    return new CustomerAvroModel.Builder();
+  public static com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder newBuilder() {
+    return new com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder();
   }
 
   /**
@@ -289,11 +291,11 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
    * @param other The existing builder to copy.
    * @return A new CustomerAvroModel RecordBuilder
    */
-  public static CustomerAvroModel.Builder newBuilder(CustomerAvroModel.Builder other) {
+  public static com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder newBuilder(com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder other) {
     if (other == null) {
-      return new CustomerAvroModel.Builder();
+      return new com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder();
     } else {
-      return new CustomerAvroModel.Builder(other);
+      return new com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder(other);
     }
   }
 
@@ -302,11 +304,11 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
    * @param other The existing instance to copy.
    * @return A new CustomerAvroModel RecordBuilder
    */
-  public static CustomerAvroModel.Builder newBuilder(CustomerAvroModel other) {
+  public static com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder newBuilder(com.work.on.kafka.order.avro.model.CustomerAvroModel other) {
     if (other == null) {
-      return new CustomerAvroModel.Builder();
+      return new com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder();
     } else {
-      return new CustomerAvroModel.Builder(other);
+      return new com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder(other);
     }
   }
 
@@ -319,8 +321,8 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
 
     private java.lang.String id;
     private java.lang.String name;
-    private java.util.List<Color> colors;
-    private SubscriptionType subscriptionType;
+    private java.util.List<com.work.on.kafka.order.avro.model.Color> colors;
+    private com.work.on.kafka.order.avro.model.SubscriptionType subscriptionType;
     private java.time.Instant createdAt;
     private java.time.Instant subscriptionFinishAt;
     private boolean active;
@@ -334,7 +336,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(CustomerAvroModel.Builder other) {
+    private Builder(com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -370,7 +372,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
      * Creates a Builder by copying an existing CustomerAvroModel instance
      * @param other The existing instance to copy.
      */
-    private Builder(CustomerAvroModel other) {
+    private Builder(com.work.on.kafka.order.avro.model.CustomerAvroModel other) {
       super(SCHEMA$, MODEL$);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -416,7 +418,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       * @param value The value of 'id'.
       * @return This builder.
       */
-    public CustomerAvroModel.Builder setId(java.lang.String value) {
+    public com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder setId(java.lang.String value) {
       validate(fields()[0], value);
       this.id = value;
       fieldSetFlags()[0] = true;
@@ -436,7 +438,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       * Clears the value of the 'id' field.
       * @return This builder.
       */
-    public CustomerAvroModel.Builder clearId() {
+    public com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder clearId() {
       id = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -456,7 +458,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       * @param value The value of 'name'.
       * @return This builder.
       */
-    public CustomerAvroModel.Builder setName(java.lang.String value) {
+    public com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder setName(java.lang.String value) {
       validate(fields()[1], value);
       this.name = value;
       fieldSetFlags()[1] = true;
@@ -476,7 +478,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       * Clears the value of the 'name' field.
       * @return This builder.
       */
-    public CustomerAvroModel.Builder clearName() {
+    public com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder clearName() {
       name = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -486,7 +488,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       * Gets the value of the 'colors' field.
       * @return The value.
       */
-    public java.util.List<Color> getColors() {
+    public java.util.List<com.work.on.kafka.order.avro.model.Color> getColors() {
       return colors;
     }
 
@@ -496,7 +498,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       * @param value The value of 'colors'.
       * @return This builder.
       */
-    public CustomerAvroModel.Builder setColors(java.util.List<Color> value) {
+    public com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder setColors(java.util.List<com.work.on.kafka.order.avro.model.Color> value) {
       validate(fields()[2], value);
       this.colors = value;
       fieldSetFlags()[2] = true;
@@ -516,7 +518,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       * Clears the value of the 'colors' field.
       * @return This builder.
       */
-    public CustomerAvroModel.Builder clearColors() {
+    public com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder clearColors() {
       colors = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -526,7 +528,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       * Gets the value of the 'subscriptionType' field.
       * @return The value.
       */
-    public SubscriptionType getSubscriptionType() {
+    public com.work.on.kafka.order.avro.model.SubscriptionType getSubscriptionType() {
       return subscriptionType;
     }
 
@@ -536,7 +538,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       * @param value The value of 'subscriptionType'.
       * @return This builder.
       */
-    public CustomerAvroModel.Builder setSubscriptionType(SubscriptionType value) {
+    public com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder setSubscriptionType(com.work.on.kafka.order.avro.model.SubscriptionType value) {
       validate(fields()[3], value);
       this.subscriptionType = value;
       fieldSetFlags()[3] = true;
@@ -556,7 +558,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       * Clears the value of the 'subscriptionType' field.
       * @return This builder.
       */
-    public CustomerAvroModel.Builder clearSubscriptionType() {
+    public com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder clearSubscriptionType() {
       subscriptionType = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -576,7 +578,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       * @param value The value of 'createdAt'.
       * @return This builder.
       */
-    public CustomerAvroModel.Builder setCreatedAt(java.time.Instant value) {
+    public com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder setCreatedAt(java.time.Instant value) {
       validate(fields()[4], value);
       this.createdAt = value.truncatedTo(java.time.temporal.ChronoUnit.MILLIS);
       fieldSetFlags()[4] = true;
@@ -596,7 +598,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       * Clears the value of the 'createdAt' field.
       * @return This builder.
       */
-    public CustomerAvroModel.Builder clearCreatedAt() {
+    public com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder clearCreatedAt() {
       fieldSetFlags()[4] = false;
       return this;
     }
@@ -615,7 +617,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       * @param value The value of 'subscriptionFinishAt'.
       * @return This builder.
       */
-    public CustomerAvroModel.Builder setSubscriptionFinishAt(java.time.Instant value) {
+    public com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder setSubscriptionFinishAt(java.time.Instant value) {
       validate(fields()[5], value);
       this.subscriptionFinishAt = value.truncatedTo(java.time.temporal.ChronoUnit.MILLIS);
       fieldSetFlags()[5] = true;
@@ -635,7 +637,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       * Clears the value of the 'subscriptionFinishAt' field.
       * @return This builder.
       */
-    public CustomerAvroModel.Builder clearSubscriptionFinishAt() {
+    public com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder clearSubscriptionFinishAt() {
       fieldSetFlags()[5] = false;
       return this;
     }
@@ -654,7 +656,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       * @param value The value of 'active'.
       * @return This builder.
       */
-    public CustomerAvroModel.Builder setActive(boolean value) {
+    public com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder setActive(boolean value) {
       validate(fields()[6], value);
       this.active = value;
       fieldSetFlags()[6] = true;
@@ -674,7 +676,7 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
       * Clears the value of the 'active' field.
       * @return This builder.
       */
-    public CustomerAvroModel.Builder clearActive() {
+    public com.work.on.kafka.order.avro.model.CustomerAvroModel.Builder clearActive() {
       fieldSetFlags()[6] = false;
       return this;
     }
@@ -686,8 +688,8 @@ public class CustomerAvroModel extends org.apache.avro.specific.SpecificRecordBa
         CustomerAvroModel record = new CustomerAvroModel();
         record.id = fieldSetFlags()[0] ? this.id : (java.lang.String) defaultValue(fields()[0]);
         record.name = fieldSetFlags()[1] ? this.name : (java.lang.String) defaultValue(fields()[1]);
-        record.colors = fieldSetFlags()[2] ? this.colors : (java.util.List<Color>) defaultValue(fields()[2]);
-        record.subscriptionType = fieldSetFlags()[3] ? this.subscriptionType : (SubscriptionType) defaultValue(fields()[3]);
+        record.colors = fieldSetFlags()[2] ? this.colors : (java.util.List<com.work.on.kafka.order.avro.model.Color>) defaultValue(fields()[2]);
+        record.subscriptionType = fieldSetFlags()[3] ? this.subscriptionType : (com.work.on.kafka.order.avro.model.SubscriptionType) defaultValue(fields()[3]);
         record.createdAt = fieldSetFlags()[4] ? this.createdAt : (java.time.Instant) defaultValue(fields()[4]);
         record.subscriptionFinishAt = fieldSetFlags()[5] ? this.subscriptionFinishAt : (java.time.Instant) defaultValue(fields()[5]);
         record.active = fieldSetFlags()[6] ? this.active : (java.lang.Boolean) defaultValue(fields()[6]);

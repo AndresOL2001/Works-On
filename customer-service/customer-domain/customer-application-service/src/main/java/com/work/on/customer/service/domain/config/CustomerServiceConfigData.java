@@ -9,7 +9,4 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "customer-service")
 public class CustomerServiceConfigData {
     private String customerRequestTopicName;
-    private String customerResponseTopicName;
-    private String restaurantApprovalRequestTopicName;
-    private String restaurantApprovalResponseTopicName;
 }

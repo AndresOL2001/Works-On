@@ -5,17 +5,19 @@
  */
 package com.work.on.kafka.order.avro.model;
 
+import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
+import org.apache.avro.util.Utf8;
 import org.apache.avro.message.BinaryMessageEncoder;
 import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Color extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 5805492452957697460L;
+  private static final long serialVersionUID = -5274274573825661444L;
 
 
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Color\",\"namespace\":\"com.food.ordering.system.kafka.order.avro.model\",\"fields\":[{\"name\":\"hex\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Color\",\"namespace\":\"com.work.on.kafka.order.avro.model\",\"fields\":[{\"name\":\"hex\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static final SpecificData MODEL$ = new SpecificData();
@@ -128,8 +130,8 @@ public class Color extends org.apache.avro.specific.SpecificRecordBase implement
    * Creates a new Color RecordBuilder.
    * @return A new Color RecordBuilder
    */
-  public static Color.Builder newBuilder() {
-    return new Color.Builder();
+  public static com.work.on.kafka.order.avro.model.Color.Builder newBuilder() {
+    return new com.work.on.kafka.order.avro.model.Color.Builder();
   }
 
   /**
@@ -137,11 +139,11 @@ public class Color extends org.apache.avro.specific.SpecificRecordBase implement
    * @param other The existing builder to copy.
    * @return A new Color RecordBuilder
    */
-  public static Color.Builder newBuilder(Color.Builder other) {
+  public static com.work.on.kafka.order.avro.model.Color.Builder newBuilder(com.work.on.kafka.order.avro.model.Color.Builder other) {
     if (other == null) {
-      return new Color.Builder();
+      return new com.work.on.kafka.order.avro.model.Color.Builder();
     } else {
-      return new Color.Builder(other);
+      return new com.work.on.kafka.order.avro.model.Color.Builder(other);
     }
   }
 
@@ -150,11 +152,11 @@ public class Color extends org.apache.avro.specific.SpecificRecordBase implement
    * @param other The existing instance to copy.
    * @return A new Color RecordBuilder
    */
-  public static Color.Builder newBuilder(Color other) {
+  public static com.work.on.kafka.order.avro.model.Color.Builder newBuilder(com.work.on.kafka.order.avro.model.Color other) {
     if (other == null) {
-      return new Color.Builder();
+      return new com.work.on.kafka.order.avro.model.Color.Builder();
     } else {
-      return new Color.Builder(other);
+      return new com.work.on.kafka.order.avro.model.Color.Builder(other);
     }
   }
 
@@ -176,7 +178,7 @@ public class Color extends org.apache.avro.specific.SpecificRecordBase implement
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(Color.Builder other) {
+    private Builder(com.work.on.kafka.order.avro.model.Color.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.hex)) {
         this.hex = data().deepCopy(fields()[0].schema(), other.hex);
@@ -188,7 +190,7 @@ public class Color extends org.apache.avro.specific.SpecificRecordBase implement
      * Creates a Builder by copying an existing Color instance
      * @param other The existing instance to copy.
      */
-    private Builder(Color other) {
+    private Builder(com.work.on.kafka.order.avro.model.Color other) {
       super(SCHEMA$, MODEL$);
       if (isValidValue(fields()[0], other.hex)) {
         this.hex = data().deepCopy(fields()[0].schema(), other.hex);
@@ -210,7 +212,7 @@ public class Color extends org.apache.avro.specific.SpecificRecordBase implement
       * @param value The value of 'hex'.
       * @return This builder.
       */
-    public Color.Builder setHex(java.lang.String value) {
+    public com.work.on.kafka.order.avro.model.Color.Builder setHex(java.lang.String value) {
       validate(fields()[0], value);
       this.hex = value;
       fieldSetFlags()[0] = true;
@@ -230,7 +232,7 @@ public class Color extends org.apache.avro.specific.SpecificRecordBase implement
       * Clears the value of the 'hex' field.
       * @return This builder.
       */
-    public Color.Builder clearHex() {
+    public com.work.on.kafka.order.avro.model.Color.Builder clearHex() {
       hex = null;
       fieldSetFlags()[0] = false;
       return this;

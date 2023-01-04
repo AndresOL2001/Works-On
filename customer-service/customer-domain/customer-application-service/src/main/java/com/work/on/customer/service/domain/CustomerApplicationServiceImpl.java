@@ -8,7 +8,7 @@ import com.work.on.customer.service.domain.entity.Color;
 import com.work.on.customer.service.domain.event.CustomerCreatedEvent;
 import com.work.on.customer.service.domain.mapper.CustomerDataMapper;
 import com.work.on.customer.service.domain.ports.input.service.CustomerApplicationService;
-import com.work.on.customer.service.domain.ports.output.message.publisher.payment.CustomerMessagePublisher;
+import com.work.on.customer.service.domain.ports.output.message.publisher.customer.CustomerMessagePublisher;
 import com.work.on.customer.service.domain.ports.output.repository.ColorRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

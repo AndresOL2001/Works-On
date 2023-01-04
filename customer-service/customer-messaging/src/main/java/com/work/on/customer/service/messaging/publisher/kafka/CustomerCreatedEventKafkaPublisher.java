@@ -4,7 +4,7 @@ import com.work.on.kafka.order.avro.model.CustomerAvroModel;
 import com.work.on.kafka.producer.service.KafkaProducer;
 import com.work.on.customer.service.domain.config.CustomerServiceConfigData;
 import com.work.on.customer.service.domain.event.CustomerCreatedEvent;
-import com.work.on.customer.service.domain.ports.output.message.publisher.payment.CustomerMessagePublisher;
+import com.work.on.customer.service.domain.ports.output.message.publisher.customer.CustomerMessagePublisher;
 import com.work.on.customer.service.messaging.mapper.CustomerMessagingDataMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.producer.RecordMetadata;

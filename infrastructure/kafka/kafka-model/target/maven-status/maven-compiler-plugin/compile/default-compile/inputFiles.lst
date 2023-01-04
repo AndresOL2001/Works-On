@@ -1,3 +1,4 @@
-D:\Programming Course\work-on\infrastructure\kafka\kafka-model\src\main\java\com\food\ordering\system\kafka\order\avro\model\Color.java
-D:\Programming Course\work-on\infrastructure\kafka\kafka-model\src\main\java\com\food\ordering\system\kafka\order\avro\model\CustomerAvroModel.java
-D:\Programming Course\work-on\infrastructure\kafka\kafka-model\src\main\java\com\food\ordering\system\kafka\order\avro\model\SubscriptionType.java
+D:\Programming Course\work-on\infrastructure\kafka\kafka-model\src\main\java\com\work\on\kafka\user\avro\model\UserAvroModel.java
+D:\Programming Course\work-on\infrastructure\kafka\kafka-model\src\main\java\com\work\on\kafka\order\avro\model\Color.java
+D:\Programming Course\work-on\infrastructure\kafka\kafka-model\src\main\java\com\work\on\kafka\order\avro\model\SubscriptionType.java
+D:\Programming Course\work-on\infrastructure\kafka\kafka-model\src\main\java\com\work\on\kafka\order\avro\model\CustomerAvroModel.java
