@@ -13,6 +13,6 @@ public interface UserJpaRepository extends JpaRepository<UserEntity, UUID> {
 
     Optional<List<UserEntity>> findByCountryAndStateAndZone(String country, String state,String zone);
 
-    Optional<UserEntity> findByControlNumber(UUID controlNumber);
+    Optional<UserEntity> findByControlNumber(String controlNumber);
 
 }

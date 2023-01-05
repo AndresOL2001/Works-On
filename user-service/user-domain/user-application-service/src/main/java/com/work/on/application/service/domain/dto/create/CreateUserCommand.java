@@ -3,33 +3,37 @@ package com.work.on.application.service.domain.dto.create;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
 @Getter
 @Builder
+@Setter
 @AllArgsConstructor
 public class CreateUserCommand {
 
     @NotNull
-    private final UUID customerId;
+    private  UUID customerId;
     @NotNull
-    private final String controlNumber;
+    private  String controlNumber;
     @NotNull
-    private final String name;
+    private  String name;
     @NotNull
-    private final String job;
+    private  String job;
     @NotNull
-    private final String country;
+    private  String country;
     @NotNull
-    private final String state;
+    private  String state;
     @NotNull
-    private final String zone;
+    private  String zone;
     @NotNull
-    private final String address;
+    private  String address;
     @NotNull
-    private final String email;
+    private  String email;
 
+    public CreateUserCommand() {
 
+    }
 }

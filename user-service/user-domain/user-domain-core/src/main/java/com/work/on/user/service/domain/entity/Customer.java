@@ -8,7 +8,10 @@ import java.util.UUID;
 public class Customer extends BaseEntity<CustomerId> {
     private String name;
 
-    private Customer(Builder builder) {
+    public Customer() {
+    }
+
+    public Customer(Builder builder) {
         setId(builder.id);
         name = builder.name;
     }

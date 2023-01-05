@@ -11,5 +11,7 @@ public interface CustomerRepository {
 
     Optional<Customer> findCustomer(UUID customerId);
 
+    Optional<Customer> findCustomerByName(String name);
+
     Customer createCustomer(Customer customer);
 }

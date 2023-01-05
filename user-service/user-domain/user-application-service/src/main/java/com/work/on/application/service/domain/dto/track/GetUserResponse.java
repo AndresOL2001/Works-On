@@ -1,6 +1,5 @@
 package com.work.on.application.service.domain.dto.track;
 
-import com.work.on.user.service.domain.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -12,13 +11,13 @@ import java.util.List;
 @AllArgsConstructor
 public class GetUserResponse {
 
-    private User user;
+    private UserResponse user;
 
     private String message;
 
     private  List<String> failureMessages;
 
-    public GetUserResponse(User user, String message) {
+    public GetUserResponse(UserResponse user, String message) {
         this.user = user;
         this.message = message;
     }

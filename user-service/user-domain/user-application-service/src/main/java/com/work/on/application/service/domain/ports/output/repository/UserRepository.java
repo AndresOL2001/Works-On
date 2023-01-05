@@ -12,7 +12,7 @@ public interface UserRepository {
 
     List<User> createUsers(List<User> users);
 
-    Optional<User> findByControlNumber(UUID controlNumber);
+    Optional<User> findByControlNumber(String controlNumber);
 
     Optional<List<User>> findByCountryAndStateAndZone(String country,String state,String zone);
 }

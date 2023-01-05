@@ -5,8 +5,10 @@ import com.work.on.application.service.domain.dto.create.CreateUserResponse;
 import com.work.on.application.service.domain.dto.message.CustomerModel;
 import com.work.on.application.service.domain.dto.track.GetUserResponse;
 import com.work.on.application.service.domain.dto.track.GetUsersResponse;
+import com.work.on.application.service.domain.dto.track.UserResponse;
+import com.work.on.application.service.domain.dto.track.UsersResponse;
+import com.work.on.application.service.domain.ports.output.repository.CustomerRepository;
 import com.work.on.domain.valueobject.CustomerId;
-import com.work.on.domain.valueobject.SubscriptionType;
 import com.work.on.user.service.domain.entity.Customer;
 import com.work.on.user.service.domain.entity.User;
 import org.springframework.stereotype.Component;
@@ -33,11 +35,11 @@ public class UserDataMapper {
                         .build()
                 ).collect(Collectors.toList());
     }
-    public GetUserResponse createUserResponse(User user, String message) {
+    public GetUserResponse createUserResponse(UserResponse user, String message) {
         return new GetUserResponse(user, message);
     }
 
-    public GetUsersResponse createUsersResponse(List<User> user, String message) {
+    public GetUsersResponse createUsersResponse(List<UsersResponse> user, String message) {
         return new GetUsersResponse(user, message);
     }
 
@@ -50,5 +52,36 @@ public class UserDataMapper {
                 .name(customerModel.getName())
                 .id(new CustomerId(UUID.fromString(customerModel.getCustomerId())))
                 .build();
+    }
+
+    public UserResponse userToUserResponse(User user,String customerName) {
+        return UserResponse.builder()
+                .points(user.getPoints())
+                .country(user.getCountry())
+                .job(user.getJob())
+                .name(user.getName())
+                .state(user.getState())
+                .zone(user.getZone())
+                .address(user.getAddress())
+                .customerName(customerName)
+                .email(user.getEmail())
+                .build();
+    }
+
+
+    public List<UsersResponse> usersToUsersResponse(List<User> users) {
+        return users.stream().map(user ->
+                        UsersResponse.builder()
+                        .country(user.getCountry())
+                        .points(user.getPoints())
+                        .job(user.getJob())
+                        .name(user.getName())
+                        .state(user.getState())
+                        .zone(user.getZone())
+                        .address(user.getAddress())
+                        .email(user.getEmail())
+                                .customerId(user.getCustomerId().toString())
+                        .build()
+                ).collect(Collectors.toList());
     }
 }

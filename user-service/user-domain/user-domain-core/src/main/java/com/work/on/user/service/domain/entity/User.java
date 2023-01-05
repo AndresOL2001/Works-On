@@ -13,8 +13,6 @@ public class User extends AgregateRoot<UserId> {
 
     private final UUID customerId;
 
-
-
     private final String controlNumber;
 
     private final String name;

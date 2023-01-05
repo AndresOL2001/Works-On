@@ -26,6 +26,7 @@ public class UserDataaccessMapper {
                 .password(userEntity.getPassword())
                 .address(userEntity.getAddress())
                 .controlNumber(userEntity.getControlNumber())
+                .customerId(userEntity.getCustomer().getCustomerId())
                 .points(new Money(userEntity.getPoints()))
                 .build();
     }
@@ -62,6 +63,7 @@ public class UserDataaccessMapper {
                         .points(new Money(user.getPoints()))
                         .controlNumber(user.getControlNumber())
                         .country(user.getCountry())
+                        .customerId(user.getCustomer().getCustomerId())
                         .name(user.getName())
                         .build())
                 .collect(Collectors.toList());

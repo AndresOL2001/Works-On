@@ -1,5 +1,6 @@
 package com.work.on.user.service.dataaccess.user.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.work.on.user.service.dataaccess.customer.entity.CustomerEntity;
 import lombok.*;
 

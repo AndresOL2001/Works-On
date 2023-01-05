@@ -27,6 +27,12 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     }
 
     @Override
+    public Optional<Customer> findCustomerByName(String name) {
+        return customerJpaRepository.findByName(name).map(customerDataAccessMapper::customerEntityToCustomer);
+    }
+
+
+    @Override
     public Customer createCustomer(Customer customer) {
         CustomerEntity customerEntity = customerDataAccessMapper.customerToCustomerEntity(customer);
         return customerDataAccessMapper.customerEntityToCustomer(customerJpaRepository.save(customerEntity));

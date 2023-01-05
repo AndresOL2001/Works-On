@@ -11,13 +11,13 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 public class GetUsersResponse {
-    private List<User> user;
+    private List<UsersResponse> user;
 
     private String message;
 
     private List<String> failureMessages;
 
-    public GetUsersResponse(List<User> user, String message) {
+    public GetUsersResponse(List<UsersResponse> user, String message) {
         this.user = user;
         this.message = message;
     }

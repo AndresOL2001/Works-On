@@ -35,7 +35,7 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public Optional<User> findByControlNumber(UUID controlNumber) {
+    public Optional<User> findByControlNumber(String controlNumber) {
         return Optional.of(userDataaccessMapper.UserEntityToUser(userJpaRepository.findByControlNumber(controlNumber).get()));
     }
 

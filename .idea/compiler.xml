@@ -58,7 +58,7 @@
       <module name="user-application-service" options="-parameters" />
       <module name="user-container" options="-parameters" />
       <module name="user-dataaccess" options="-parameters" />
-      <module name="user-domain" options="" />
+      <module name="user-domain" options="-parameters" />
       <module name="user-domain-core" options="-parameters" />
       <module name="user-messaging" options="-parameters" />
       <module name="user-service" options="" />
