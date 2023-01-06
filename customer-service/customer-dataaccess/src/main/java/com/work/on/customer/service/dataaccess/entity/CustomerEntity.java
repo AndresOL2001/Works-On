@@ -28,7 +28,7 @@ public class CustomerEntity {
     @Enumerated(EnumType.STRING)
     private SubscriptionType subscriptionType;
     private boolean active;
-    @ManyToMany
+    @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(
             name = "colors_customers",
             joinColumns = @JoinColumn(name = "customerId"),

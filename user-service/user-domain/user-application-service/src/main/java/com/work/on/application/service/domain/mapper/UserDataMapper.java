@@ -2,12 +2,11 @@ package com.work.on.application.service.domain.mapper;
 
 import com.work.on.application.service.domain.dto.create.CreateUserCommand;
 import com.work.on.application.service.domain.dto.create.CreateUserResponse;
-import com.work.on.application.service.domain.dto.message.CustomerModel;
+import com.work.on.application.service.domain.dto.message.CustomerMessagingModel;
 import com.work.on.application.service.domain.dto.track.GetUserResponse;
 import com.work.on.application.service.domain.dto.track.GetUsersResponse;
 import com.work.on.application.service.domain.dto.track.UserResponse;
 import com.work.on.application.service.domain.dto.track.UsersResponse;
-import com.work.on.application.service.domain.ports.output.repository.CustomerRepository;
 import com.work.on.domain.valueobject.CustomerId;
 import com.work.on.user.service.domain.entity.Customer;
 import com.work.on.user.service.domain.entity.User;
@@ -47,7 +46,7 @@ public class UserDataMapper {
         return CreateUserResponse.builder().message(message).build();
     }
 
-    public Customer customerModelToCustomer(CustomerModel customerModel) {
+    public Customer customerModelToCustomer(CustomerMessagingModel customerModel) {
         return Customer.newBuilder()
                 .name(customerModel.getName())
                 .id(new CustomerId(UUID.fromString(customerModel.getCustomerId())))

@@ -6,6 +6,7 @@ logging:
     com.work.on: DEBUG
 
 customer-service:
+  logo-request-topic-name: logo-request
   customer-request-topic-name: customer-request
   customer-response-topic-name: customer-response
   outbox-scheduler-fixed-rate: 10000
@@ -51,6 +52,7 @@ kafka-consumer-config:
   key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
   value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
   customer-consumer-group-id:  customer-topic-consumer
+  logo-consumer-group-id: logo-topic-consumer
   restaurant-approval-consumer-group-id: restaurant-approval-topic-consumer
   auto-offset-reset: earliest
   specific-avro-reader-key: specific.avro.reader

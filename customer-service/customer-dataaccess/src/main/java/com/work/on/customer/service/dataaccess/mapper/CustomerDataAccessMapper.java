@@ -25,6 +25,7 @@ public class CustomerDataAccessMapper {
                         .collect(Collectors.toList()))
                 .createdAt(customerEntity.getCreatedAt())
                 .name(customerEntity.getName())
+                .logo(customerEntity.getLogo())
                 .subscriptionFinishAt(customerEntity.getSubscriptionFinishAt())
                 .build();
     }
@@ -40,6 +41,7 @@ public class CustomerDataAccessMapper {
                 .subscriptionType(customer.getSubscriptionType())
                 .createdAt(customer.getCreatedAt())
                 .subscriptionFinishAt(customer.getSubscriptionFinishAt())
+                .logo(customer.getLogo())
                 .name(customer.getName())
                 .build();
     }

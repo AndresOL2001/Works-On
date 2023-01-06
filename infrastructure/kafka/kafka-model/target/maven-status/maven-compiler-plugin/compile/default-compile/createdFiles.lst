@@ -1,7 +1,8 @@
+com\work\on\kafka\order\avro\model\FileType.class
 com\work\on\kafka\order\avro\model\SubscriptionType.class
-com\work\on\kafka\user\avro\model\UserAvroModel.class
-com\work\on\kafka\user\avro\model\UserAvroModel$Builder.class
+com\work\on\kafka\order\avro\model\FileAvroModel.class
 com\work\on\kafka\order\avro\model\CustomerAvroModel.class
 com\work\on\kafka\order\avro\model\CustomerAvroModel$Builder.class
 com\work\on\kafka\order\avro\model\Color$Builder.class
 com\work\on\kafka\order\avro\model\Color.class
+com\work\on\kafka\order\avro\model\FileAvroModel$Builder.class

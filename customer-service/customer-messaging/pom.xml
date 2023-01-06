@@ -25,6 +25,10 @@
         </dependency>
         <dependency>
             <groupId>com.work.on</groupId>
+            <artifactId>kafka-consumer</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.work.on</groupId>
             <artifactId>kafka-producer</artifactId>
         </dependency>
         <dependency>

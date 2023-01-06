@@ -64,6 +64,36 @@
             </dependency>
             <dependency>
                 <groupId>com.work.on</groupId>
+                <artifactId>upload-domain-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>upload-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>upload-application-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>upload-application</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>upload-messaging</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>upload-dataaccess</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
                 <artifactId>user-application-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -135,6 +165,16 @@
             <dependency>
                 <groupId>com.work.on</groupId>
                 <artifactId>common-application</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>common-dataaccess</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>upload-application</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

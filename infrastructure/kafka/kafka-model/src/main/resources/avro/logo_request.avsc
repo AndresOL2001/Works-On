@@ -1,0 +1,48 @@
+{
+  "namespace": "com.work.on.kafka.order.avro.model",
+  "type": "record",
+  "name": "FileAvroModel",
+  "fields": [
+    {
+      "name": "id",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "title",
+      "type": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "url",
+      "type": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "fileType",
+      "type": {
+        "type": "enum",
+        "name": "FileType",
+        "symbols": [ "IMAGE","VIDEO","DOCUMENT"]
+      }
+    },
+    {
+      "name": "createdAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "customerId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    }
+  ]
+}

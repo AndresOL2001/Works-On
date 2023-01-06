@@ -1,1 +1,2 @@
 /infrastructure/docker-compose/volumes/
+/upload-service/upload-domain/upload-application-service/src/main/resources/static/uploads/logos/

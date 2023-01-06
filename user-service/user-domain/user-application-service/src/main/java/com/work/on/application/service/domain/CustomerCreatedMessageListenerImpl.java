@@ -1,6 +1,6 @@
 package com.work.on.application.service.domain;
 
-import com.work.on.application.service.domain.dto.message.CustomerModel;
+import com.work.on.application.service.domain.dto.message.CustomerMessagingModel;
 import com.work.on.application.service.domain.mapper.UserDataMapper;
 import com.work.on.application.service.domain.ports.input.message.listener.user.CustomerCreatedMessageListener;
 import com.work.on.application.service.domain.ports.output.repository.CustomerRepository;
@@ -24,7 +24,7 @@ public class CustomerCreatedMessageListenerImpl implements CustomerCreatedMessag
 
 
     @Override
-    public void customerCreated(CustomerModel customerModel) {
+    public void customerCreated(CustomerMessagingModel customerModel) {
         Customer customer = customerRepository.createCustomer(userDataMapper.customerModelToCustomer(customerModel));
         if (customer == null) {
             log.error("Customer could not be created in order database with id: {}", customer.getId());

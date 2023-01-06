@@ -1,6 +1,7 @@
 package com.work.on.user.service.dataaccess.customer.adapter;
 
 import com.work.on.application.service.domain.ports.output.repository.CustomerRepository;
+import com.work.on.domain.valueobject.CustomerId;
 import com.work.on.user.service.dataaccess.customer.entity.CustomerEntity;
 import com.work.on.user.service.dataaccess.customer.mapper.CustomerDataAccessMapper;
 import com.work.on.user.service.dataaccess.customer.repository.CustomerJpaRepository;
@@ -23,7 +24,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 
     @Override
     public Optional<Customer> findCustomer(UUID customerId) {
-        return customerJpaRepository.findById(customerId).map(customerDataAccessMapper::customerEntityToCustomer);
+        return customerJpaRepository.findById(new CustomerId(customerId)).map(customerDataAccessMapper::customerEntityToCustomer);
     }
 
     @Override

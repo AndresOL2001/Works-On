@@ -13,7 +13,7 @@ import java.util.UUID;
 public class Customer extends AgregateRoot<CustomerId> {
     private final String name;
     private final List<Color> colorList;
-    private final String logo;
+    private  String logo;
     private ZonedDateTime createdAt;
     private  ZonedDateTime subscriptionFinishAt;
     private final SubscriptionType subscriptionType;
@@ -58,6 +58,10 @@ public class Customer extends AgregateRoot<CustomerId> {
 
     public void setSubscriptionFinishAt(ZonedDateTime subscriptionFinishAt) {
         this.subscriptionFinishAt = subscriptionFinishAt;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
     }
 
     public String getName() {

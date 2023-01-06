@@ -10,6 +10,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>upload-service</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>upload-application</module>
+        <module>upload-container</module>
+        <module>upload-domain</module>
+        <module>upload-dataaccess</module>
+        <module>upload-messaging</module>
+        <module>upload-domain/upload-domain-core</module>
+        <module>upload-domain/upload-application-service</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
