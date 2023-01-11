@@ -1,0 +1,20 @@
+package com.work.on.assigment.service.domain.dto.response;
+
+import com.work.on.assignment.service.domain.entity.Assignment;
+import com.work.on.domain.valueobject.AssignmentId;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+
+import javax.validation.constraints.NotNull;
+
+@Getter
+@Builder
+@AllArgsConstructor
+public class CreateAssignmentResponse {
+
+    private final AssignmentId assignmentId;
+
+    @NotNull
+    private final String message;
+}

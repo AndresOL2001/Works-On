@@ -5,7 +5,6 @@ import com.work.on.domain.valueobject.CustomerId;
 import com.work.on.domain.valueobject.FileId;
 import com.work.on.kafka.order.avro.model.Color;
 import com.work.on.kafka.order.avro.model.CustomerAvroModel;
-import com.work.on.kafka.order.avro.model.FileAvroModel;
 import com.work.on.kafka.order.avro.model.SubscriptionType;
 import com.work.on.customer.service.domain.event.CustomerCreatedEvent;
 import org.springframework.stereotype.Component;

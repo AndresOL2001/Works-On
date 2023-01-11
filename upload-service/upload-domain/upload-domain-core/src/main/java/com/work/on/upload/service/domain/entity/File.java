@@ -1,10 +1,7 @@
 package com.work.on.upload.service.domain.entity;
 
 import com.work.on.domain.entity.AgregateRoot;
-import com.work.on.domain.valueobject.CustomerId;
-import com.work.on.domain.valueobject.FileId;
-import com.work.on.domain.valueobject.FileType;
-import com.work.on.domain.valueobject.TopicType;
+import com.work.on.domain.valueobject.*;
 import com.work.on.upload.service.domain.exception.UploadDomainException;
 
 import java.time.ZoneId;
@@ -24,7 +21,11 @@ public class File extends AgregateRoot<FileId> {
 
     private TopicType topic;
 
+    private UserId userId;
 
+    public UserId getUserId() {
+        return userId;
+    }
 
     public ZonedDateTime getCreatedAt() {
         return createdAt;
@@ -62,6 +63,7 @@ public class File extends AgregateRoot<FileId> {
         type = builder.type;
         createdAt = builder.createdAt;
         customerId = builder.customerId;
+        userId = builder.userId;
     }
 
     public static Builder newBuilder() {
@@ -93,6 +95,8 @@ public class File extends AgregateRoot<FileId> {
         private FileId id;
         private String title;
 
+        private UserId userId;
+
         private TopicType topic;
 
         private String url;
@@ -101,6 +105,11 @@ public class File extends AgregateRoot<FileId> {
         private CustomerId customerId;
 
         private Builder() {
+        }
+
+        public Builder userId(UserId val){
+            userId = val;
+            return this;
         }
 
         public Builder id(FileId val) {

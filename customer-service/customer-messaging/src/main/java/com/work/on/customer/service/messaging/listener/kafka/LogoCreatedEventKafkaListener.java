@@ -3,7 +3,6 @@ package com.work.on.customer.service.messaging.listener.kafka;
 import com.work.on.customer.service.domain.ports.input.message.listener.logo.LogoCreatedMessageListener;
 import com.work.on.customer.service.messaging.mapper.CustomerMessagingDataMapper;
 import com.work.on.kafka.consumer.KafkaConsumer;
-import com.work.on.kafka.order.avro.model.FileAvroModel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;

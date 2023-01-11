@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/assignment-service/assignment-application/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment-service/assignment-container/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment-service/assignment-dataaccess/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment-service/assignment-domain/assignment-application-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment-service/assignment-domain/assignment-domain-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment-service/assignment-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment-service/assignment-domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assignment-service/assignment-messaging/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/assignment-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/assignment-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/common-application/src/main/java" charset="UTF-8" />

@@ -21,6 +21,11 @@
         <module>customer-service/customer-domain</module>
         <module>customer-service/customer-messaging</module>
         <module>infrastructure</module>
+        <module>assignment-service/assignment-application</module>
+        <module>assignment-service/assignment-container</module>
+        <module>assignment-service/assignment-dataaccess</module>
+        <module>assignment-service/assignment-domain</module>
+        <module>assignment-service/assignment-messaging</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -59,6 +64,16 @@
             </dependency>
             <dependency>
                 <groupId>com.work.on</groupId>
+                <artifactId>assignment-domain-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>assignment-application-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
                 <artifactId>user-domain-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -90,6 +105,26 @@
             <dependency>
                 <groupId>com.work.on</groupId>
                 <artifactId>upload-dataaccess</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>assignment-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>assignment-messaging</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>assignment-application</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.work.on</groupId>
+                <artifactId>assignment-dataaccess</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

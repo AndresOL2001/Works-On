@@ -2,6 +2,7 @@ package com.work.on.upload.service.dataaccess.upload.entity;
 
 import com.work.on.domain.valueobject.FileType;
 import com.work.on.domain.valueobject.TopicType;
+import com.work.on.domain.valueobject.UserId;
 import com.work.on.upload.service.dataaccess.customer.entity.CustomerEntity;
 import lombok.*;
 
@@ -36,4 +37,6 @@ public class FileEntity {
     @ManyToOne()
     @JoinColumn(name = "customerId")
     private CustomerEntity customer;
+
+    private UUID userId;
 }

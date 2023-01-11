@@ -1,0 +1,138 @@
+{
+  "namespace": "com.work.on.kafka.order.avro.model",
+  "type": "record",
+  "name": "AssignmentAvroModel",
+  "fields": [
+    {
+      "name": "id",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "topic",
+      "type": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "customerId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "deliveryDate",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "createdAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      }
+    },
+    {
+      "name": "points",
+      "type": {
+        "type": "bytes",
+        "logicalType": "decimal",
+        "precision": 10,
+        "scale": 2
+      }
+    },
+    {
+      "name": "tasks",
+      "type": {
+        "type": "array",
+        "items": {
+          "name": "TaskAvroModel",
+          "type": "record",
+          "fields": [
+            {
+              "name": "id",
+              "type": "string",
+              "logicalType": "uuid"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "name": "polls",
+              "type": {
+                "type": "array",
+                "items": {
+                  "name": "PollAvroModel",
+                  "type": "record",
+                  "fields": [
+                    {
+                      "name": "id",
+                      "type": "string",
+                      "logicalType": "uuid"
+                    },
+                    {
+                      "name": "pollName",
+                      "type": "string"
+                    },
+                    {
+                      "name": "questions",
+                      "type": {
+                        "type": "array",
+                        "items": {
+                          "name": "QuestionAvroModel",
+                          "type": "record",
+                          "fields": [
+                            {
+                              "name": "id",
+                              "type": "string"
+                            },
+                            {
+                              "name": "questionDesc",
+                              "type": "string",
+                              "logicalType": "uuid"
+                            },
+                            {
+                              "name": "answer",
+                              "type": "string"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+              },
+            {
+              "name": "files",
+              "type": {
+                "type": "array",
+                "items": {
+                  "name": "FileAssignmentAvroModel",
+                  "type": "record",
+                  "fields": [
+                    {
+                      "name": "id",
+                      "type": "string",
+                      "logicalType": "uuid"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
