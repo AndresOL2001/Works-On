@@ -23,8 +23,8 @@ public class Poll extends BaseEntity<PollId> {
     private String pollDesc;
 
     private Poll(Builder builder) {
-        questionList = builder.questionList;
         pollDesc = builder.pollName;
+        taskId = builder.taskId;
         setId(builder.id);
     }
 
@@ -35,10 +35,6 @@ public class Poll extends BaseEntity<PollId> {
     public void initiatePoll(TaskId id) {
         setId(new PollId(UUID.randomUUID()));
         taskId = id;
-        for (Question question:
-             questionList) {
-
-        }
     }
 
     public String getPollDesc() {

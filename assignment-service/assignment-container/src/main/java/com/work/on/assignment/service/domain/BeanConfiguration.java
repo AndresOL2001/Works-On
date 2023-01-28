@@ -12,4 +12,9 @@ public class BeanConfiguration {
     public AssignmentDomainService assignmentDomainService() {
         return new AssignmentDomainServiceImpl();
     }
+
+    @Bean
+    public PollDomainService pollDomainService() {
+        return new PollDomainServiceImpl();
+    }
 }

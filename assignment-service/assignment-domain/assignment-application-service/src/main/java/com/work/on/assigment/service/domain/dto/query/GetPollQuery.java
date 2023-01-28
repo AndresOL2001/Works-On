@@ -1,0 +1,17 @@
+package com.work.on.assigment.service.domain.dto.query;
+
+import com.work.on.assignment.service.domain.valueobject.PollId;
+import com.work.on.domain.valueobject.AssignmentId;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+
+import javax.validation.constraints.NotNull;
+
+@Getter
+@Builder
+@AllArgsConstructor
+public class GetPollQuery {
+    @NotNull
+    private final PollId pollId;
+}

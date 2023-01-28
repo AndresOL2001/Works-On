@@ -23,14 +23,12 @@ public class CreateAssignmentCommandHandler {
 
     private final AssignmentRepository assignmentRepository;
 
-    private final TaskRepository taskRepository;
 
     private final AssignmentDataMapper assignmentDataMapper;
 
-    public CreateAssignmentCommandHandler(AssignmentDomainService assignmentDomainService, AssignmentRepository assignmentRepository, TaskRepository taskRepository, AssignmentDataMapper assignmentDataMapper) {
+    public CreateAssignmentCommandHandler(AssignmentDomainService assignmentDomainService, AssignmentRepository assignmentRepository, AssignmentDataMapper assignmentDataMapper) {
         this.assignmentDomainService = assignmentDomainService;
         this.assignmentRepository = assignmentRepository;
-        this.taskRepository = taskRepository;
         this.assignmentDataMapper = assignmentDataMapper;
     }
 
@@ -46,7 +44,7 @@ public class CreateAssignmentCommandHandler {
         if (assignmentDatabase == null) {
             log.error("Could not save assignment with id: {}", assignmentCreatedEvent.getAssignment().getId());
             throw new AssignmentDomainException("Could not save customer with id " +
-                    assignmentCreatedEvent.getAssignment().getId());
+                    assignmentCreatedEvent.getAssignment().getId().getValue().toString());
         }
         log.info("Returning AssignmentCreatedEvent for customer id: {} with {} number of tasks", assignmentCreatedEvent.getAssignment().getId()
         ,2);

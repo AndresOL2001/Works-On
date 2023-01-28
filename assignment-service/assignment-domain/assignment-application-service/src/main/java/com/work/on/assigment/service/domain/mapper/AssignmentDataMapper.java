@@ -1,12 +1,12 @@
 package com.work.on.assigment.service.domain.mapper;
 
 import com.work.on.assigment.service.domain.dto.create.CreateAssignmentCommand;
+import com.work.on.assigment.service.domain.dto.create.CreatePollCommand;
 import com.work.on.assigment.service.domain.dto.response.CreateAssignmentResponse;
+import com.work.on.assigment.service.domain.dto.response.CreatePollResponse;
 import com.work.on.assigment.service.domain.dto.response.GetAssignmentResponse;
-import com.work.on.assignment.service.domain.entity.Assignment;
-import com.work.on.assignment.service.domain.entity.Customer;
-import com.work.on.assignment.service.domain.entity.Task;
-import com.work.on.assignment.service.domain.entity.User;
+import com.work.on.assignment.service.domain.entity.*;
+import com.work.on.assignment.service.domain.event.PollCreatedEvent;
 import com.work.on.assignment.service.domain.valueobject.TaskId;
 import com.work.on.domain.valueobject.CustomerId;
 import com.work.on.domain.valueobject.UserId;
@@ -43,4 +43,16 @@ public class AssignmentDataMapper {
                 .build();
     }
 
+    public Poll createPollCommandToPoll(CreatePollCommand createPollCommand) {
+        return Poll.newBuilder()
+                .taskId(new TaskId(createPollCommand.getTaskId()))
+                .pollName(createPollCommand.getName())
+                .build();
+    }
+
+    public CreatePollResponse pollCreatedEventToCreatePollResponse(PollCreatedEvent pollCreatedEvent, String s) {
+        return CreatePollResponse.builder()
+                .message(s)
+                .build();
+    }
 }

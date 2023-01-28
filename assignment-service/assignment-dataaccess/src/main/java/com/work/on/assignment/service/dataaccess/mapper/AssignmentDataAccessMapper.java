@@ -131,27 +131,16 @@ public class AssignmentDataAccessMapper {
 
     public  Poll polEntityToPol(PollEntity pollEntity) {
         return Poll.newBuilder()
+                .pollName(pollEntity.getPollName())
                 .id(new PollId(pollEntity.getPollId()))
-                .questionList(pollEntity.getQuestionList().stream().map(questionEntity ->
-                        Question.newBuilder()
-                                .correctAnswer(questionEntity.getCorrectAnswer())
-                                .id(new QuestionId(questionEntity.getQuestionId()))
-                                .pollId(new PollId(questionEntity.getPoll().getPollId()))
-                                .build()
-                        ).collect(Collectors.toList()))
                 .taskId(new TaskId(pollEntity.getTask().getTaskId()))
                 .build();
     }
 
     public  PollEntity polToPolEntity (Poll poll) {
         return PollEntity.builder()
+                .pollName(poll.getPollDesc())
                 .pollId(poll.getId().getValue())
-                .questionList(poll.getQuestionList().stream().map(questionEntity ->
-                        QuestionEntity.builder()
-                                .correctAnswer(questionEntity.getCorrectAnswer())
-                                .questionId(questionEntity.getId().getValue())
-                                .build()
-                ).collect(Collectors.toList()))
                 .build();
     }
 
