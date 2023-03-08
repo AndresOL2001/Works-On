@@ -2,7 +2,10 @@ package com.work.on.assignment.service.domain.entity;
 
 import com.work.on.assignment.service.domain.valueobject.PollId;
 import com.work.on.assignment.service.domain.valueobject.QuestionId;
+import com.work.on.assignment.service.domain.valueobject.TaskId;
 import com.work.on.domain.entity.BaseEntity;
+
+import java.util.UUID;
 
 public class Question extends BaseEntity<QuestionId> {
 
@@ -25,7 +28,12 @@ public class Question extends BaseEntity<QuestionId> {
     private Question(Builder builder) {
         question = builder.question;
         correctAnswer = builder.correctAnswer;
-       setId(builder.id);
+        pollId = builder.pollId;
+        setId(builder.id);
+    }
+
+    public void initiatePoll() {
+        setId(new QuestionId(UUID.randomUUID()));
     }
 
     public static Builder newBuilder() {

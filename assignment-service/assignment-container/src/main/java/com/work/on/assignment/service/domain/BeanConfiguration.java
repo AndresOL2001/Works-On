@@ -17,4 +17,9 @@ public class BeanConfiguration {
     public PollDomainService pollDomainService() {
         return new PollDomainServiceImpl();
     }
+
+    @Bean
+    public QuestionDomainService questionDomainService() {
+        return new QuestionDomainServiceImpl();
+    }
 }

@@ -1,13 +1,11 @@
 package com.work.on.assigment.service.domain.dto.create;
 
-import com.work.on.domain.valueobject.CustomerId;
 import com.work.on.domain.valueobject.Money;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 
 import javax.validation.constraints.NotNull;
-import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.UUID;
 
